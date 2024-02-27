@@ -35,6 +35,15 @@ public class PreorderTraversal {
             preorderPrint(root.left);
             preorderPrint(root.right);
         }
+
+        public static void inorderPrint(node root){
+            if(root==null){
+                return;
+            }
+            inorderPrint(root.left);
+            System.out.print(root.data+" ");
+            inorderPrint(root.right);
+        }
     }
 
    
@@ -43,6 +52,7 @@ public class PreorderTraversal {
         BinaryTree tree=new BinaryTree();
          node root=tree.buildTree(nodes);
         tree.preorderPrint(root);
-    
+    System.out.println();
+    tree.inorderPrint(root);
     }
 }
