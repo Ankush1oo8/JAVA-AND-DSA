@@ -47,6 +47,24 @@ public class LCA {
         node lca=path1.get(i-1);
         return lca;
       }
+      public static node lca2(node root, int n1,int n2){
+        if(root==null){
+          return null;
+        }
+        if(root.data==n1 || root.data==n2){
+          return root;
+        }
+        node left=lca2(root.left, n1, n2);
+        node right=lca2(root.right, n1, n2);
+
+        if(right==null){
+          return left;
+        }
+        if(left==null){
+          return right;
+        }
+        return root;
+      } 
         public static void main(String args[]) {
             node root=new node(1);
             root.left=new node(2);
@@ -57,7 +75,8 @@ public class LCA {
             root.right.right=new node(7);
             int n1=4, n2=5;
             System.out.println(lca(root, n1, n2).data);
-    
+            System.out.println(lca2(root, n1, n2).data);
+
         }
     }
     
