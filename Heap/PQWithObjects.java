@@ -15,7 +15,16 @@ public class PQWithObjects {
         }
     }
     public static void main(String[] args) {
-        PriorityQueue<>pq=new PriorityQueue<>();
+        PriorityQueue<student>pq=new PriorityQueue<>(/*to print in reverse order put 'Comparator.reverseOrder()'here */);
+        pq.add(new student("A", 4));
+        pq.add(new student("B", 5));
+        pq.add(new student("C", 2));
+        pq.add(new student("D", 12));
+
+        while(!pq.isEmpty()){
+            System.out.println(pq.peek().name+" -> "+pq.peek().rank);
+            pq.remove();
+        }
 
     }
 }
