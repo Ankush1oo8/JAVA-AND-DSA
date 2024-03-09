@@ -20,6 +20,6 @@ public class multiple_catch {
                {  
                 System.out.println("Parent Exception occurs");  
                }             
-            System.out.println("rest of the code");    
+               System.out.println("rest of the code");    
  } 
 }
