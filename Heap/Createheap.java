@@ -19,6 +19,9 @@ public class Createheap {
                 arr.set(par,temp);
             }
         }
+        public int peek(){
+            return arr.get(0);
+        }
     }
     
 }
