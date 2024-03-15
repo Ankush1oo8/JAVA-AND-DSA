@@ -13,5 +13,8 @@ public class iteratorOnHashSet {
         while(it.hasNext()){
             System.out.println(it.next());
         }
+        for(Integer num : set){
+            System.out.println(num);
+        }
     }
 }
