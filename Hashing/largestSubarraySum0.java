@@ -11,15 +11,13 @@ public class largestSubarraySum0{
 
         for (int j = 0; j < arr.length; j++) {
             sum += arr[j];
-            if (sum == 0) {
-                len = j + 1;
-            } else {
+           
                 if (map.containsKey(sum)) {
                     len = Math.max(len, j - map.get(sum));
                 } else {
-                    map.put(sum, j);
+                  map.put(sum, j);
                 }
-            }
+            
         }
         System.out.println("Largest subarray with sum equal to 0: " + len);
     }
