@@ -51,8 +51,11 @@ public class cycle {
 
     for(int i=0;i<graph[curr].size();i++){
         edge e=graph[curr].get(i);
-        if(!vis[e.dist] && detectcycleUtil(graph,vis,e.dist,curr)){
-            return true;
+        if(!vis[e.dist] ){
+            if( detectcycleUtil(graph,vis,e.dist,curr)){
+                return true;
+            }
+            
         }else if(vis[e.dist] && e.dist!=par){
           return true;  
         }
